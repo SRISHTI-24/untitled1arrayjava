@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>EMPLOYEE.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+EMPLOYEE.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Objects</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+<span class="s0">public class </span><span class="s1">EMPLOYEE {</span>
+    <span class="s0">int </span><span class="s1">EID</span><span class="s0">;</span>
+    <span class="s1">String ENAME</span><span class="s0">;</span>
+    <span class="s0">int </span><span class="s1">EMP_SAL</span><span class="s0">;</span>
+    <span class="s1">String C_NAME</span><span class="s0">;</span>
+
+    <span class="s1">EMPLOYEE(</span><span class="s0">int </span><span class="s1">EID</span><span class="s0">, </span><span class="s1">String ENAME</span><span class="s0">, int </span><span class="s1">EMP_SAL</span><span class="s0">, </span><span class="s1">String C_NAME) {</span>
+        <span class="s0">this</span><span class="s1">.EID = EID</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.ENAME = ENAME</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.EMP_SAL = EMP_SAL</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.C_NAME = C_NAME</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s0">public static void </span><span class="s1">result(EMPLOYEE at[])</span>
+    <span class="s1">{</span>
+        <span class="s0">int </span><span class="s1">max1=Integer.MIN_VALUE</span><span class="s0">, </span><span class="s1">max2 = Integer.MIN_VALUE</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">ai=</span><span class="s2">0</span><span class="s0">, </span><span class="s1">bi=</span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s2">0</span><span class="s0">;</span><span class="s1">i&lt;at.length</span><span class="s0">;</span><span class="s1">i++)</span>
+        <span class="s1">{</span>
+            <span class="s0">if</span><span class="s1">(at[i].C_NAME.equals(</span><span class="s3">&quot;A&quot;</span><span class="s1">) &amp;&amp; at[i].EMP_SAL&gt;max1)</span>
+            <span class="s1">{</span>
+                <span class="s1">max1=at[i].EMP_SAL</span><span class="s0">;</span>
+                <span class="s1">ai=i</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s0">if</span><span class="s1">(at[i].C_NAME.equals(</span><span class="s3">&quot;B&quot;</span><span class="s1">) &amp;&amp; at[i].EMP_SAL&gt;max2)</span>
+            <span class="s1">{</span>
+                <span class="s1">max2=at[i].EMP_SAL</span><span class="s0">;</span>
+                <span class="s1">bi=i</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">System.out.println(max1)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(max2)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+<span class="s0">class </span><span class="s1">EMPLOYEETEST</span>
+<span class="s1">{</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s0">int </span><span class="s1">n</span><span class="s0">;</span>
+        <span class="s1">Scanner s = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;HOW MANY OBJECTS&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">n = s.nextInt()</span><span class="s0">;</span>
+        <span class="s1">EMPLOYEE a[] = </span><span class="s0">new </span><span class="s1">EMPLOYEE[n]</span><span class="s0">;</span>
+        <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s2">0</span><span class="s0">;</span><span class="s1">i&lt;a.length</span><span class="s0">;</span><span class="s1">i++)</span>
+        <span class="s1">{</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;enter credentials :- 1.COMPANYNAME 2. EMPLOYEENAME  3.EMPLOYEEID  4.EMPLOYEESALARY&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">a[i] = </span><span class="s0">new </span><span class="s1">EMPLOYEE(s.nextInt()</span><span class="s0">,</span><span class="s1">s.next()</span><span class="s0">,</span><span class="s1">s.nextInt()</span><span class="s0">,</span><span class="s1">s.next())</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">EMPLOYEE.result(a)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

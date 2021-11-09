@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>palindr.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+palindr.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+<span class="s0">class </span><span class="s1">palindr {</span>
+
+        <span class="s0">static public void </span><span class="s1">palindrome(</span><span class="s0">int </span><span class="s1">a[]</span><span class="s0">, int </span><span class="s1">n)</span>
+        <span class="s1">{</span>
+            <span class="s0">int </span><span class="s1">f=</span><span class="s2">0</span><span class="s0">;</span>
+            <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s2">0</span><span class="s0">;</span><span class="s1">i&lt;=n/</span><span class="s2">2 </span><span class="s1">&amp;&amp; n!=</span><span class="s2">0</span><span class="s0">;</span><span class="s1">i++)</span>
+            <span class="s1">{</span>
+                <span class="s0">if</span><span class="s1">(a[i]!=a[n-i-</span><span class="s2">1</span><span class="s1">])</span>
+                <span class="s1">{</span>
+                    <span class="s1">f=</span><span class="s2">1</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s0">if</span><span class="s1">(f==</span><span class="s2">1</span><span class="s1">)</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;Not A Palindrome&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s0">else</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;Palindrome&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">public static void </span><span class="s1">main(String args[])</span>
+        <span class="s1">{</span>
+            <span class="s0">int </span><span class="s1">n</span><span class="s0">;</span>
+            <span class="s1">Scanner sc = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+            <span class="s1">n=sc.nextInt()</span><span class="s0">;</span>
+            <span class="s0">int</span><span class="s1">[] a=</span><span class="s0">new int</span><span class="s1">[n]</span><span class="s0">;</span>
+            <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s2">0</span><span class="s0">;</span><span class="s1">i&lt;n</span><span class="s0">;</span><span class="s1">i++)</span>
+            <span class="s1">{</span>
+                <span class="s1">a[i]=sc.nextInt()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s1">palindrome(a</span><span class="s0">,</span><span class="s1">n)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
