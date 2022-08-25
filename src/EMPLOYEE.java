@@ -3,10 +3,11 @@ import java.util.Scanner;
 public class EMPLOYEE {
     int EID;
     String ENAME;
-    int EMP_SAL;
+    int EMP_SAL;  
     String C_NAME;
 
     EMPLOYEE(int EID, String ENAME, int EMP_SAL, String C_NAME) {
+        
         this.EID = EID;
         this.ENAME = ENAME;
         this.EMP_SAL = EMP_SAL;
