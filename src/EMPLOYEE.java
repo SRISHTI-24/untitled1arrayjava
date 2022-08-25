@@ -27,6 +27,7 @@ public class EMPLOYEE {
             {
                 max2=at[i].EMP_SAL;
                 bi=i;
+         
             }
         }
         System.out.println(max1);
